@@ -34,7 +34,7 @@ USER_EMAIL = ""
 # The password for the Smart user
 USER_PASSWORD = ""
 
-# The 2FA code for the Smart user
+# The current 2FA code for the Smart user (if 2FA enabled)
 USER_2FA = ""
 ```
   

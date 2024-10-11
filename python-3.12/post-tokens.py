@@ -19,9 +19,9 @@ headers = {
 
 # Data for the POST request - Replace with the correct fields expected by the API
 data = {
-    "email": "", # The Smart user's email address
-    "password": "", # The Smart user's password (plain-text)
-    "two_factor_code": "117513", # If two-factor authentication is enabled for the user
+    "email": os.getenv('USER_EMAIL'), # The Smart user's email address
+    "password": os.getenv('USER_PASSWORD'), # The Smart user's password (plain-text)
+    "two_factor_code": os.getenv('USER_2FA'), # If two-factor authentication is enabled for the user
     "device_name": "My Device", # An device name to identify the device that requested the token
 }
 
@@ -34,11 +34,11 @@ response = requests.post(
 
 # Success (201 - Created) or failure (any other status code isn't what we expect)
 if response.status_code == 201: 
+    # Print the JSON data, which should include the token (if new token)
     print("Success! Token generated:")
-    # Print the JSON data, which should include the token
     print(response. json()) 
 else:
+    # Print an error message
     print(f"Request failed with status code: {response.status_code}")
     print("Error response from the server:")
-    # Print the error message
-    print(response. text) 
+    print(response.text) 
