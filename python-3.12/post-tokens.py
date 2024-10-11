@@ -1,3 +1,5 @@
+# Special thanks to Adonis Zhao from TVSA Pilot Training for starting this code.
+
 import requests
 import os
 from dotenv import load_dotenv
