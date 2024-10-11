@@ -1,0 +1,10 @@
+# Standard ignore files
+.venv/
+.env
+.search-cache
+.DS_Store
+.env
+.vscode/
+.idea/
+/node_modules/
+/vendor/
