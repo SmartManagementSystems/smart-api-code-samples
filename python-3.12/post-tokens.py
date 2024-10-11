@@ -13,7 +13,7 @@ headers = {
     "Accept": "application/json", # Standard required header
     "Content-Type": "application/json", # Standard required header
     "X-Application-Id": os.getenv('APP_ID'),
-    "Authorization": os.getenv('PUBLISHABLE_KEY'),
+    "Authorization": "Bearer " + os.getenv('PUBLISHABLE_KEY'),
     "X-Tenant": os.getenv('TENANT_ID'),
 }
 
